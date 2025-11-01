@@ -1,0 +1,178 @@
+/* Custom CSS (style.css) */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root {
+    --dark-bg: #0a0f1c;
+    --text-color: #f8f9fa;
+    --accent-blue: #007bff;
+    --accent-cyan: #00ffff;
+    --card-bg: #141c2f;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll from AOS */
+}
+
+/* --- Global Elements --- */
+.navbar, .footer {
+    background-color: rgba(10, 15, 28, 0.95) !important; /* Semi-transparent for modern look */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-brand, .nav-link, .footer-text {
+    color: var(--text-color) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand:hover, .nav-link:hover {
+    color: var(--accent-cyan) !important;
+    text-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.btn-primary {
+    background-color: var(--accent-blue);
+    border-color: var(--accent-blue);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+    border-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5); /* Blue glow */
+}
+
+.text-cyan {
+    color: var(--accent-cyan) !important;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Subtle cyan glow */
+}
+
+.text-blue {
+    color: var(--accent-blue) !important;
+}
+
+/* --- Cards and Sections --- */
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2); /* Cyan glow on hover */
+}
+
+section {
+    padding: 80px 0;
+}
+
+/* --- Hero Section Specific --- */
+.hero-section {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Optional subtle terminal/grid pattern for a code-inspired look */
+    background-image: radial-gradient(rgba(0, 255, 255, 0.05) 1px, transparent 1px), radial-gradient(rgba(0, 123, 255, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.hero-img {
+    width: 650px;
+    height: 650px;
+    object-fit: cover;
+    /* object-position: l; */
+    border-radius: 50%;
+    border: 5px solid var(--accent-cyan);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* --- Social Icons --- */
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--accent-cyan);
+    transform: scale(1.1);
+}
+
+/* --- Timeline Styling (for About Page) --- */
+.timeline {
+    border-left: 3px solid var(--accent-blue);
+    padding-left: 20px;
+    position: relative;
+}
+
+.timeline-item {
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--accent-cyan);
+    border: 3px solid var(--dark-bg);
+}
+
+/* --- Form Styling --- */
+.form-control, .form-control:focus {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    border-color: var(--accent-cyan);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 767.98px) {
+    .hero-img {
+        width: 180px;
+        height: 180px;
+    }
+    .hero-section {
+        min-height: 100vh;
+    }
+}
+/* Custom CSS (style.css) - Ensuring the icon styles are professional */
+/* ... (rest of CSS) ... */
+
+/* --- Social Icons --- */
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon:hover {
+    /* Subtle neon glow on hover */
+    color: var(--accent-cyan); 
+    transform: scale(1.1);
+    text-shadow: 0 0 10px var(--accent-cyan); 
+}
+.paragraph1{
+    color : white;
+}

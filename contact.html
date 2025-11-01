@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Ayyan Dev</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+          footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-cyan" href="index.html">
+                <i class="fas fa-code me-2"></i>Anas Dev
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="container">
+            <h2 class="text-center display-5 fw-bold mb-5" data-aos="fade-down">Get In <span class="text-cyan">Touch</span></h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xl-6">
+                    <form id="contactForm" data-aos="fade-in">
+                        <div class="mb-3">
+                            <label for="name" class="form-label text-blue">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-blue">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label text-blue">Message</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                    </form>
+
+                    <div id="thankYouMessage" class="card p-5 text-center mt-5" style="display: none;" data-aos="zoom-in">
+                        <h4 class="text-cyan">Message Sent Successfully!</h4>
+                        <p class="lead mb-0">Thank you for reaching out, Ayyan will get back to you shortly.</p>
+                        <i class="fas fa-check-circle text-blue mt-3" style="font-size: 3rem;"></i>
+                    </div>
+
+                    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
+                        <h5 class="text-white-50 mb-3">Or connect instantly:</h5>
+                        <a href="https://github.com" target="_blank" class="social-icon mx-3"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com" target="_blank" class="social-icon mx-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:ayyan@example.com" class="social-icon mx-3"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer py-4 mt-auto border-top border-secondary opacity-75">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        
+        <p class="text-white-50 mb-2 mb-md-0 fw-light">
+            &copy; 2025 <span class="text-cyan fw-bold">Anas Dev</span> — All Rights Reserved
+        </p>
+        
+        <div class="d-flex">
+            <a href="https://github.com" target="_blank" class="social-icon mx-2 text-decoration-none" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon mx-2 text-decoration-none" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:ayyan@example.com" class="social-icon mx-2 text-decoration-none" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            disable: 'mobile'
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission for demo
+            
+            // Hide the form
+            this.style.display = 'none';
+            
+            // Show the thank you message
+            const thankYou = document.getElementById('thankYouMessage');
+            thankYou.style.display = 'block';
+            
+            // Re-initialize AOS to fire the animation on the newly visible element
+            AOS.refresh();
+        });
+    </script>
+</body>
+</html>
